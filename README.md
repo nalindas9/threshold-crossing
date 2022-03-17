@@ -1,6 +1,6 @@
 # threshold-crossing
 
-[![License:MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/nalindas9/rss-feed-parser/blob/master/LICENSE)
+[![License:MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/nalindas9/threshold-crossing/blob/master/LICENSE)
 
 ## About
  We're going to produce some data on a separate thread and give you access to a queue where you can retrieve the data for processing. 
