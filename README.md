@@ -35,6 +35,7 @@ https://user-images.githubusercontent.com/44141068/158737827-4fd1d087-8400-4e7c-
 ## System and library requirements
 - C++ 20
 - CMake version 3.22.22022201-MSVC_2
+- Windows 10
 
 ## How to Run
 - Install Visual Studio 2019+. The free Community Edition is perfect.
