@@ -146,53 +146,7 @@ int main()
         previous_data = newest_data;
         imgui_stuff::MainLoopEnd(window);
     }
-    /*
-    while (true)
-    {
-        imgui_stuff::MainLoopBegin(window_flags);
-        std::cout << "paaji\n";
-        //std::cout << "Enter esc to exit\n";
-        //std::cin >> exit;
-        frame_cnt++;
-        auto newest_data = q.try_pop_newest();
-        data_q.push(newest_data);
-        //std::cout << "q size: " << q.size_hint() << std::endl;
-        if (newest_data && (previous_data != NULL))
-        {
-            //std::cout << "newest_data: " << newest_data->sequence_id << " previous_data:" << previous_data->sequence_id << std::endl;
-            ImGui::Text("Sequence: %zu", newest_data->sequence_id);
-            // ***** The amplitude is greater than or equal to 0.9f
-            float max = *std::max_element(newest_data->values.begin(),
-                newest_data->values.end());
-            // ***** The data of the previous 'sequence' did not have a maximum data point greater than or equal to 0.9f
-            previous_max = *std::max_element(previous_data->values.begin(),
-                previous_data->values.end());
-            max_idx = std::max_element(previous_data->values.begin(),
-                previous_data->values.end()) - previous_data->values.begin();
 
-            //std::cout << "max: " << max << " previous_max:" << previous_max << std::endl;
-
-            ImGui::PlotLines("##data", newest_data->values.data(),
-                newest_data->values.size(),
-                0,
-                0,
-                0.0f,
-                1.0f,
-                { 800, 400 });
-            if ((max >= 0.9) && (previous_max < 0.9)) {
-                ImGui::Text("Threshhold crossed in sequence %zu at index %zu \n", newest_data->sequence_id, max_idx);
-                std::pair<size_t, int> value;
-                value.first = newest_data->sequence_id;
-                value.second = max_idx;
-                threshold_crossings[newest_data] = value;
-            }
-        }
-
-        []
-        previous_data = newest_data;
-        imgui_stuff::MainLoopEnd(window);
-    }
-    */
     std::cout << "dataq size: " << data_q.size() << std::endl;
     std::vector<size_t> sequence_ids = {};
     for (int i = 0; i < data_q.size(); i++) {
